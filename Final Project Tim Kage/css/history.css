@@ -1,0 +1,168 @@
+/* Navbar */
+.sidebar {
+    background-color: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(10px);
+   }
+   
+   .profile-img {
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+       object-fit: cover;
+       cursor: pointer;
+   }
+   
+   /* Dropdown menu styling */
+   .dropdown-menu {
+       width: 200px; /* Lebar dropdown */
+       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+       border-radius: 8px; /* Sudut membulat */
+       border: none; /* Hilangkan border */
+       padding: 10px; /* Padding dalam dropdown */
+   }
+   
+   .dropdown-item {
+       display: flex;
+       align-items: center;
+       font-size: 14px; /* Ukuran teks */
+       font-weight: 500; /* Tebal teks */
+       color: #000000; /* Warna teks */
+   }
+   
+   .dropdown-item:hover {
+       background-color: #f5f5f5; /* Warna saat hover */
+       border-radius: 6px; /* Sudut membulat saat hover */
+   }
+   
+   /* Nama pengguna di dropdown */
+   .dropdown-header {
+       display: flex;
+       color: black;
+       align-items: center;
+       gap: 10px; /* Jarak antara gambar dan teks */
+       padding: 10px 0;
+       border-bottom: 1px solid #e9ecef; /* Garis bawah */
+       margin-bottom: 10px;
+       overflow: hidden;
+       text-overflow: ellipsis;
+   }
+   
+   /* Gambar profil di dropdown */
+   .dropdown-header img {
+       width: 40px; /* Tentukan lebar gambar */
+       height: 40px; /* Tentukan tinggi gambar */
+       border-radius: 50%; /* Membuat gambar menjadi bulat */
+       object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
+       object-position: center; /* Menjaga gambar tetap terpusat di dalam lingkaran */
+   }
+   
+   
+   /* Nama pengguna di dropdown */
+   .dropdown-header span {
+       font-size: 16px; /* Ukuran teks */
+       font-weight: 600; /* Berat font */
+       flex-shrink: 1; /* Membuat teks menyusut jika ruang terbatas */
+       white-space: nowrap; /* Menghindari pembungkusan teks */
+       overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
+       text-overflow: ellipsis; /* Menambahkan elipsis jika teks terpotong */
+   }
+
+
+
+/* Mengatur background dan font umum */
+body {
+    background-color: #ffffff;
+}
+
+/* Container utama */
+.container-custom {
+    max-width: 700px; /* Batasi lebar card container */
+    padding: 20px;
+    margin: auto; /* Agar berada di tengah layar */
+    margin-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Judul Halaman */
+h2 {
+    font-size: 1.8rem; /* Sedikit lebih kecil */
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Card Pemesanan */
+.row.mb-4 {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px; /* Mengurangi padding */
+    transition: all 0.3s ease;
+    margin-bottom: 15px; /* Mengurangi jarak antar card */
+}
+
+/* Efek Hover pada Card Pemesanan */
+.row.mb-4:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling untuk nama mobil */
+.col-md-6 h5 {
+    font-size: 1rem; /* Ukuran lebih kecil */
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Styling untuk detail teks */
+p {
+    font-size: 0.9rem; /* Ukuran lebih kecil */
+    margin-bottom: 8px; /* Mengurangi jarak antar paragraf */
+}
+
+/* Styling untuk status pemesanan */
+p strong {
+    font-weight: 600;
+}
+
+p span {
+    font-weight: 500;
+}
+
+p span[style*="color: red"] {
+    color: red;
+}
+
+p span[style*="color: green"] {
+    color: green;
+}
+
+p span[style*="color: orange"] {
+    color: orange;
+}
+
+/* Styling untuk gambar mobil */
+.img-fluid {
+    border-radius: 8px;
+    max-height: 300px; /* Ukuran lebih kecil */
+    object-fit: cover; /* Menjaga rasio gambar agar tidak pecah */
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* Untuk responsivitas, gambar diatur lebih kecil pada perangkat mobile */
+@media (max-width: 768px) {
+    .row.mb-4 {
+        flex-direction: column;
+    }
+
+    .img-fluid {
+        max-height: 250px; /* Gambar lebih kecil pada perangkat kecil */
+    }
+
+    /* Menyesuaikan container agar lebih responsif di layar kecil */
+    .container-custom {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

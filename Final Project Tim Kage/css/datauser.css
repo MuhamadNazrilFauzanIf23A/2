@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.header {
+    background-color: #2f84ca;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Tombol Tambah */
+.btn-tambah {
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-tambah:hover {
+    background-color: #218838;
+}
+
+/* Tabel */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background-color: #f1f1f1;
+    color: #000;
+    text-transform: uppercase;
+}
+
+td img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Tombol Aksi */
+.btn {
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.btn-edit {
+    background-color: #007bff;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3;
+}
+
+.btn-hapus {
+    background-color: #dc3545;
+}
+
+.btn-hapus:hover {
+    background-color: #c82333;
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none; /* Sembunyikan header pada layar kecil */
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    td:last-child {
+        border-bottom: none; /* Hilangkan garis bawah pada elemen terakhir */
+    }
+
+    td::before {
+        content: attr(data-label); /* Tampilkan nama kolom */
+        font-weight: bold;
+        color: #333;
+        flex-basis: 40%; /* Lebar label */
+        text-align: left;
+    }
+
+    .btn {
+        display: inline-block;
+        margin: 5px;
+        font-size: 12px;
+        text-align: center;
+        background-color: #007bff;
+        color: white;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+}

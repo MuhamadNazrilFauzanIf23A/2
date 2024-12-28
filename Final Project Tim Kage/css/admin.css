@@ -1,0 +1,48 @@
+.card-custom {
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar {
+z-index: 1050; /* navbar diatas elemen */
+}
+
+.card-blue { background-color: #ff1e1e; }
+.card-green { background-color: #ffe100; }
+.card-red { background-color: #0dc50a; }
+.icon-large {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #343a40;
+    min-height: 100vh;
+    color: white;
+}
+.sidebar a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    background-color: #495057;
+}
+
+/* Hide sidebar on small devices */
+@media (max-width: 991px) {
+    .sidebar {
+        display: none;
+    }
+}

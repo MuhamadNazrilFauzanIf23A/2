@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+select {
+    width: 100%; /* Lebar 100% dari elemen induk, bisa diubah sesuai kebutuhan */
+    padding: 8px; /* Ruang di dalam input untuk membuat tampilan lebih rapi */
+    font-size: 16px; /* Ukuran font di dalam dropdown */
+    border: 1px solid #ccc; /* Border ringan */
+    border-radius: 4px; /* Sudut yang lebih halus */
+    background-color: #f9f9f9; /* Warna latar belakang */
+    color: #333; /* Warna teks */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px; /* Memberikan jarak antara label dan input */
+    font-size: 14px; /* Ukuran font label */
+    color: #555; /* Warna teks label */
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+h2 {
+    text-align: center;
+    color: #333;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+input, textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #dc3545;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+a:hover {
+    background-color: #c82333;
+}

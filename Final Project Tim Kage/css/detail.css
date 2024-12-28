@@ -1,0 +1,151 @@
+body {
+    background-image: url('../Foto/backgroundhal.jpg'); /* Ganti dengan path gambar Anda */
+    background-size: cover; /* Pastikan gambar menutupi seluruh area */
+    background-position: center; /* Pusatkan gambar */
+    background-repeat: no-repeat; /* Hindari pengulangan gambar */
+    position: relative; /* Dibutuhkan untuk overlay */
+    color: #fff; /* Ubah warna teks agar kontras dengan latar belakang */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /* Flexbox untuk memusatkan konten */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna overlay gelap dengan transparansi */
+    z-index: -1; /* Pastikan overlay berada di bawah konten */
+}
+
+/* pop up modal */
+.modal-content {
+    color: black; /* Ubah warna teks di dalam modal */
+}
+
+.modal-header .modal-title,
+.modal-body p {
+    color: black; /* Pastikan teks judul dan paragraf di dalam modal berwarna hitam */
+}
+
+/* detail */
+.container.detail-container {
+    margin-top: 150px; /* Sesuaikan dengan tinggi navbar */
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.692);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.detail-container img {
+    width: 100%; /* Agar gambar memenuhi lebar kolom */
+    max-width: 530px; /* Atau ukuran tetap yang diinginkan */
+    height: auto; /* Agar tetap menjaga proporsi */
+    object-fit: cover; /* Potong gambar agar sesuai ukuran */
+    border-radius: 8px; /* lengkung */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-md-6 {
+    padding: 20px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: black;
+}
+
+.btn {
+    margin: 10px 5px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .container.detail-container {
+        max-width: 90%; /* Sesuaikan lebar kontainer agar lebih kecil */
+        padding: 20px; /* Kurangi padding untuk layar kecil */
+    }
+
+    .detail-container img {
+        max-width: 100%; /* Gambar mengikuti lebar kolom sepenuhnya */
+        height: auto; /* Tetap menjaga proporsi */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Kurangi ukuran font */
+    }
+
+    p {
+        font-size: 0.9rem; /* Kurangi ukuran teks */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Kurangi ukuran tombol */
+        padding: 8px 15px; /* Sesuaikan padding tombol */
+    }
+}
+
+@media (max-width: 576px) {
+    .row {
+        flex-direction: column; /* Ubah tata letak menjadi kolom */
+        text-align: center; /* Pusatkan teks */
+    }
+
+    .col-md-6 {
+        padding: 10px; /* Kurangi padding kolom */
+    }
+
+    h2 {
+        font-size: 1.25rem; /* Lebih kecil untuk layar yang sangat kecil */
+    }
+
+    p {
+        font-size: 0.8rem; /* Ukuran teks lebih kecil */
+    }
+
+    .btn {
+        font-size: 0.8rem; /* Ukuran tombol lebih kecil */
+        padding: 6px 12px; /* Sesuaikan padding tombol */
+    }
+}

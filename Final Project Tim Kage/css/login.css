@@ -1,0 +1,60 @@
+body.class-page {
+    background-image: url('../Foto/backgroundhal.jpg'); /* Path ke gambar background */
+    background-size: cover; /* Gambar menutupi seluruh halaman */
+    background-position: center; /* Pusatkan gambar */
+    background-repeat: no-repeat; /* Hindari pengulangan gambar */
+    height: 100vh; /* Tinggi penuh layar */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna overlay gelap dengan transparansi */
+    z-index: -1; /* Pastikan overlay berada di bawah konten */
+}
+
+.container {
+    z-index: 1; /* Pastikan kontainer berada di atas background */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.8); /* Transparansi untuk menyatu dengan background */
+    backdrop-filter: blur(10px); /* Efek blur pada background di belakang kartu */
+    border: none; /* Hilangkan border */
+    border-radius: 12px; /* Sudut membulat untuk estetika */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow lembut untuk kedalaman */
+}
+
+h1 {
+    font-size: 1.8rem; /* Ukuran heading */
+    font-weight: bold;
+    color: #333; /* Warna teks */
+}
+
+.btn-primary {
+    background-color: #007bff; /* Warna tombol */
+    border: none; /* Hilangkan border tombol */
+    transition: background-color 0.3s ease; /* Animasi saat hover */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Warna saat hover */
+}
+
+a {
+    color: #007bff; /* Warna link */
+    text-decoration: none; /* Hilangkan garis bawah */
+}
+
+a:hover {
+    text-decoration: underline; /* Tambahkan garis bawah saat hover */
+}

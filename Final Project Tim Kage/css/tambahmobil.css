@@ -1,0 +1,101 @@
+/* Reset margin dan padding */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gaya untuk header */
+.header {
+    background-color: #2f84ca;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2em;
+}
+
+/* Container form */
+.form-container {
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk judul form */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #171616;
+}
+
+/* Label */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Input dan textarea */
+input[type="text"], input[type="number"], select, textarea, input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Fokus input */
+input:focus, select:focus, textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 4px rgba(76, 175, 80, 0.2);
+}
+
+/* Tombol */
+button[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    label, input, select, textarea, button {
+        font-size: 0.9em;
+    }
+}

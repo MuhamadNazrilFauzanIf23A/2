@@ -1,0 +1,193 @@
+/* Background Image for the whole body */
+body {
+    display: flex;
+    justify-content: center; /* Menempatkan konten secara horizontal di tengah */
+    align-items: center; /* Menempatkan konten secara vertikal di tengah */
+    height: 100vh; /* Memastikan body mengambil seluruh tinggi layar */
+    margin: 0; /* Menghilangkan margin default body */
+    background-image: url('../Foto/backgroundhal.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+/* Navbar */
+.sidebar {
+    background-color: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(10px);
+   }
+   
+   .profile-img {
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+       object-fit: cover;
+       cursor: pointer;
+   }
+   
+   /* Dropdown menu styling */
+   .dropdown-menu {
+       width: 200px; /* Lebar dropdown */
+       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan lembut */
+       border-radius: 8px; /* Sudut membulat */
+       border: none; /* Hilangkan border */
+       padding: 10px; /* Padding dalam dropdown */
+   }
+   
+   .dropdown-item {
+       display: flex;
+       align-items: center;
+       font-size: 14px; /* Ukuran teks */
+       font-weight: 500; /* Tebal teks */
+       color: #000000; /* Warna teks */
+   }
+   
+   .dropdown-item:hover {
+       background-color: #f5f5f5; /* Warna saat hover */
+       border-radius: 6px; /* Sudut membulat saat hover */
+   }
+   
+   /* Nama pengguna di dropdown */
+   .dropdown-header {
+       display: flex;
+       color: black;
+       align-items: center;
+       gap: 10px; /* Jarak antara gambar dan teks */
+       padding: 10px 0;
+       border-bottom: 1px solid #e9ecef; /* Garis bawah */
+       margin-bottom: 10px;
+       overflow: hidden;
+       text-overflow: ellipsis;
+   }
+   
+   /* Gambar profil di dropdown */
+   .dropdown-header img {
+       width: 40px; /* Tentukan lebar gambar */
+       height: 40px; /* Tentukan tinggi gambar */
+       border-radius: 50%; /* Membuat gambar menjadi bulat */
+       object-fit: cover; /* Memastikan gambar menutupi area tanpa distorsi */
+       object-position: center; /* Menjaga gambar tetap terpusat di dalam lingkaran */
+   }
+   
+   
+   /* Nama pengguna di dropdown */
+   .dropdown-header span {
+       font-size: 16px; /* Ukuran teks */
+       font-weight: 600; /* Berat font */
+       flex-shrink: 1; /* Membuat teks menyusut jika ruang terbatas */
+       white-space: nowrap; /* Menghindari pembungkusan teks */
+       overflow: hidden; /* Menyembunyikan teks yang melebihi batas */
+       text-overflow: ellipsis; /* Menambahkan elipsis jika teks terpotong */
+   }
+   
+/* Overlay Gelap di atas Background */
+body::after {
+    content: ''; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay gelap dengan transparansi */
+    z-index: 1; /* Overlay berada di bawah konten */
+}
+
+.contact {
+    position: relative; /* Agar tetap berada di atas background */
+    z-index: 2; /* Menempatkan contact di atas background */
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 50px;
+    padding-top: 30px;
+    display: flex;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.668); /* Background putih transparan agar teks lebih mudah dibaca */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk teks di dalam contact */
+.contact-details {
+    flex: 1;
+    color: black; /* Warna teks hitam untuk kontak */
+}
+
+.contact-details h1 {
+    margin-bottom: 20px;
+    color: black; /* Menjadikan h1 hitam */
+}
+
+.contact-details h2 {
+    margin-bottom: 10px;
+    color: black; /* Menjadikan h2 hitam */
+}
+
+.contact-details p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black; /* Menjadikan teks di paragraf hitam */
+}
+
+/* Styling untuk social media links */
+.social-media {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: black; /* Menjadikan link sosial media hitam */
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Styling untuk location iframe */
+.location {
+    flex: 1;
+    padding-top: 50px;
+}
+
+iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        padding: 20px;
+        padding-top: 80px;
+    }
+
+    .location {
+        margin-top: 20px;
+    }
+
+    iframe {
+        height: 250px;
+    }
+
+    .contact-details h1 {
+        font-size: 24px;
+    }
+
+    .contact-details h2 {
+        font-size: 18px;
+    }
+
+    .contact-details p {
+        font-size: 14px;
+    }
+
+    .social-media a {
+        font-size: 16px;
+    }
+}
